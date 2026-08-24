@@ -9,7 +9,8 @@
     <title>Loading | PULSE</title>
 
     <script>
-    if (window.location.search !== "?home") {
+    if (!sessionStorage.getItem("loadingShown")) {
+        sessionStorage.setItem("loadingShown", "true");
         window.location.href = "loading.html";
     }
 </script>
