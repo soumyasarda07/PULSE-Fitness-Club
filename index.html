@@ -1,98 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3;url=index.html">
 
-    <title>Loading | PULSE</title>
+    <title>PULSE Fitness Club</title>
 
-    
     <style>
 
-        body {
-            height: 100vh;
+        * {
             margin: 0;
-            background-color: #F6F3EC;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .loading {
-            width: 300px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F6F3EC;
+            color: #1B1B18;
+        }
+
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            background-color: #F6F3EC;
+            border-bottom: 1px solid #ddd8ca;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1B1B18;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #E4572E;
+        }
+
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .wave {
+            color: #E4572E;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4C6B54;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #E4572E;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #4C6B54;
+        }
+
+        .section {
+            padding: 80px 60px;
             text-align: center;
         }
 
-        .pulse {
-            color: #E4572E;
-            font-size: 35px;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
+        .section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
         }
 
-        h1 {
-            color: #1B1B18;
-            font-size: 45px;
-            letter-spacing: 3px;
-            margin: 0 0 30px 0;
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
         }
 
-        .bar {
-            width: 100%;
-            height: 8px;
-            background-color: #E0DCD0;
-            border-radius: 10px;
-            overflow: hidden;
+        .card {
+            width: 280px;
+            padding: 35px;
+            background-color: white;
+            border-radius: 15px;
         }
 
-        .progress {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(to right, #E4572E, #4C6B54);
-            animation: load 3s forwards;
+        .card h3 {
+            margin-bottom: 15px;
         }
 
-        p {
-            color: #4C6B54;
-            font-size: 13px;
-            margin-top: 15px;
-            letter-spacing: 2px;
+        .card p {
+            color: #555;
+            line-height: 1.5;
         }
 
-        .dots::after {
-            content: "";
-            animation: dots 1.5s infinite;
-        }
-
-        @keyframes load {
-            from {
-                width: 0%;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes dots {
-            0% {
-                content: "";
-            }
-
-            33% {
-                content: ".";
-            }
-
-            66% {
-                content: "..";
-            }
-
-            100% {
-                content: "...";
-            }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #1B1B18;
+            color: white;
         }
 
     </style>
@@ -100,19 +139,113 @@
 
 <body>
 
-    <div class="loading">
+    <nav>
 
-        <div class="pulse">〰〰〰</div>
-
-        <h1>PULSE</h1>
-
-        <div class="bar">
-            <div class="progress"></div>
+        <div class="logo">
+            PULSE
         </div>
 
-        <p>LOADING<span class="dots"></span></p>
+        <div>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-    </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="wave">
+                〰〰〰
+            </div>
+
+            <h1>PULSE</h1>
+
+            <p>
+                Move with purpose. Train with passion.
+                Build a stronger version of yourself.
+            </p>
+
+            <a href="#programs" class="button">
+                EXPLORE PROGRAMS
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="about">
+
+        <h2>ABOUT PULSE</h2>
+
+        <p>
+            PULSE is a fitness community designed to help you
+            become stronger, healthier and more confident.
+        </p>
+
+    </section>
+
+
+    <section class="section" id="programs">
+
+        <h2>OUR PROGRAMS</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>STRENGTH</h3>
+                <p>
+                    Build strength and develop a powerful body
+                    with structured training.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CARDIO</h3>
+                <p>
+                    Improve your endurance and energy with
+                    effective cardio workouts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>WELLNESS</h3>
+                <p>
+                    Focus on balance, recovery and creating
+                    healthy habits.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="contact">
+
+        <h2>JOIN PULSE</h2>
+
+        <p>
+            Your journey starts here.
+        </p>
+
+        <br>
+
+        <a href="#" class="button">
+            JOIN NOW
+        </a>
+
+    </section>
+
+
+    <footer>
+        © 2026 PULSE Fitness Club
+    </footer>
 
 </body>
 </html>
